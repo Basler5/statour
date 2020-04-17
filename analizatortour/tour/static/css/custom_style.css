@@ -1,0 +1,43 @@
+@font-face {
+	font-family: ALSRubl;
+	src: url(fonts/rouble.ttf); /* Путь к файлу со шрифтом */
+}
+
+.rubznak-rub:before {
+	font-family: ALSRubl;
+	content: "\0063";
+}
+
+.rubznak-slim-rub:before {
+	font-family: ALSRubl;
+	content: "\006F";
+}
+
+
+/* устанавливаем для таблицы внешнюю границу серого цвета толщиной 3px */
+table {
+	border-top: 3px solid grey;
+	/*border-top: 3px solid grey;*/
+	}
+
+/* задаём для ячейки тела таблицы границу серого цвета толщиной 1px */
+td {
+	border-bottom: 1px solid grey;
+	/* border-bottom: 1px solid grey; */
+	}
+
+table td:nth-of-type(2) {
+	width:100px;
+	text-align: right;
+}
+
+table td:nth-of-type(3) {
+	width:145px;
+	text-align: right;
+}
+
+.page_aviasales {
+	float: right;
+}
+
+

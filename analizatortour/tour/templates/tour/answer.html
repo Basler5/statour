@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ответ</title>
+        {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+</head>
+<body>
+<div class="container">
+<div class="row">
+<h4>Откуда {{ val1 }}</h4>
+<h4>Куда {{ val2 }}</h4>
+{% for re in resp %}
+   <h6> {{ re }} </h6>
+{% endfor %}
+
+</div>
+</div>
+</body>
+</html>

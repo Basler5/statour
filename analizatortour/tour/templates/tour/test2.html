@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+<h2>Тестовая форма запроса</h2>
+    </div>
+<form class="needs-validation" novalidate="" action="" method="POST">
+    {% csrf_token %}
+    <div class="row">
+        <div class="col-md-2">
+        {{search.dep_city.label_tag}}
+        {{search.dep_city}}
+        <div class="invalid-feedback">
+       {{search.dep_city.errors}}
+        </div>
+        </div>
+        <div class="col-md-2">
+            {{search.des_city.label_tag}}
+            {{search.des_city}}
+        <div class="invalid-feedback">
+        {{search.des_city.errors}}
+        </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            {{search.date_of_dep.label_tag}}
+            {{search.date_of_dep}}
+            {{search.date_of_dep.errors}}
+        </div>
+        <div class="col-md-2">
+            {{search.ret_date.label_tag}}
+            {{search.ret_date}}
+            {{search.ret_date.errors}}
+        </div>
+    </div>
+    <br>
+    <br>
+    <button class="btn btn-primary col-md-2" type="submit">Сравнить</button>
+</form>
+</div>
+</body>
+</html>

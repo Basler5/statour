@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+{% load static %}
+        <!-- Libs CSS -->
+        <link rel="stylesheet" href="https://dashkit.goodthemes.co/assets/fonts/feather/feather.css" />
+        <link rel="stylesheet" href="{% static 'css/custom_style.css' %}" />
+        <link rel="stylesheet" href="https://dashkit.goodthemes.co/assets/libs/flatpickr/dist/flatpickr.min.css" />
+        <link rel="stylesheet" href="https://dashkit.goodthemes.co/assets/libs/quill/dist/quill.core.css" />
+        <link rel="stylesheet" href="https://dashkit.goodthemes.co/assets/libs/highlightjs/styles/vs2015.css" />
+
+
+        <!-- Map -->
+{#        <link href="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" rel="stylesheet" />#}
+
+        <!-- Theme CSS -->
+        <link rel="stylesheet" href="{% static 'css/theme.min.css' %}" id="stylesheetLight" />
+        <link rel="stylesheet" href="{% static 'css/theme.min.css' %}" id="stylesheetDark" />
+
+        <title>Страница сравнения</title>
+    </head>
+    <body>
+<!-- NAVIGATION ================================================== -->
+        <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-dark" id="sidebar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="http://127.0.0.1:8000/">
+                    <img alt="logo" class="d-block mx-auto" src="/static/logo.svg" >
+                </a>
+                <div class="collapse navbar-collapse" id="sidebarCollapse">
+                <form class="needs-validation" novalidate="" action="" method="POST">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sidebarFrom" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="sidebarFrom">
+                                <i class="fe fe-home"></i> Откуда и когда летим?
+                            </a>
+                            <div class="collapse" id="sidebarFrom">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <div class="col-md-12 mb-1">
+                                            {{search.departure_country}}
+                                        </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <div class="col-md-12 mb-1">
+                                            {{search.departure_city}}
+                                        </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <div class="col-md-12 mb-1">
+                                            {{search.date_of_departure}}
+                                        </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <div class="col-md-12 mb-1">
+                                            {{search.changing_the_departure_date}}
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sidebarWhere" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="sidebarWhere">
+                                <i class="fe fe-home"></i> Куда летим и когда обратно?
+                            </a>
+                            <div class="collapse show" id="sidebarWhere">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <div class="col-md-12 mb-1">
+                                            {{search.destination_country}}
+                                        </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <div class="col-md-12 mb-1">
+                                            {{search.destination_resort}}
+                                        </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <div class="col-md-12 mb-1">
+                                            {{search.return_date}}
+                                        </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <div class="col-md-12 mb-1">
+                                            {{search.changing_return_date}}
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                <hr class="navbar-divider my-2">
+                    <!-- Navigation2 -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sidebarHotel" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarHotel">
+                                <i class="fe fe-clipboard"></i> Отель
+                            </a>
+                            <div class="collapse " id="sidebarHotel">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item ">
+                                        <div class="col-md-12 mb-3">
+                                            {{search.hotel_name}}
+                                        </div>
+                                    </li>
+<!-- <hr class="navbar-divider my-3">-->
+                                    <li class="nav-item ">
+                                        <div class="col-md-12 mb-1">
+                                            {{search.count_of_hotel_stars}}
+                                        </div>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <div class="col-md-12 mb-1">
+                                            {{search.hotel_rating}}
+                                        </div>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <div class="col-md-12 mb-1">
+                                            {{search.type_of_food}}
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        </ul>
+                    <hr class="navbar-divider my-2">
+                    <!-- Navigation3 -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sidebarPeople" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPeople">
+                                <i class="fe fe-clipboard"></i> Кол-во отдыхающих
+                            </a>
+                            <div class="collapse " id="sidebarPeople">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item ">
+                                        <div class="col-md-12 mb-1">
+                                            {{search.number_of_adults}}
+                                        </div>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <div class="col-md-12 mb-1">
+                                            {{search.number_of_children}}
+                                        </div>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <div class="col-md-12 mb-1">
+                                            {{search.number_of_infants}}
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        </ul>
+                    <hr class="navbar-divider my-2">
+                        <!-- Navigation4 -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item navbar-dark navbar-nav nav-link">
+                            <div class="col-md-12 mb-1">
+                                <div class="custom-control custom-checkbox">
+                                    {{search.direct_flights_only}}
+                                    <label class="custom-control-label" for="id_direct_flights_only">
+                                      Искать только прямые рейсы
+                                  </label>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item navbar-dark navbar-nav nav-link">
+                            <div class="col-md-12 mb-1">
+                                <div class="custom-control custom-checkbox">
+                                    {{search.accommodation_at_the_hotel_only}}
+                                  <label class="custom-control-label" for="id_accommodation_at_the_hotel_only">
+                                    Искаль только отели</label>
+                                </div>
+                            </div>
+                        </li>
+                        </ul>
+                        <button class="btn btn-primary btn-lg btn-block" type="submit">
+                            <i class="fe fe-sliders mr-2"></i> Обновить
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+<!-- BODY ================================================== -->
+        <div class="main-content">
+            <div class="header">
+                <div class="container-fluid">
+                    <div class="header-body">
+                        <div class="row align-items-end">
+                            <div class="col">
+                                <h6 class="header-pretitle">
+                                </h6>
+                                <h1 class="header-title">
+                                Результат сравнения
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-xl-6">
+                        <div class="card">
+                            <div class="card-header" name="page_header_rezult">
+                                <h4 class="card-header-title" >
+                                    Подождите пока происходит загрузка...
+                                </h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <div name="page_rezult" class="rez_rezult col-auto">
+                                            <img alt="loading" class="d-block mx-auto" height="200" src="/static/loading.gif" width="200">
+                                        </div>
+                                    </div>
+                                </div>
+                              <div class="row align-items-center">
+                                  <div class="col"></div>
+                                  <div name="page_rezult_price" class="col-auto"></div>
+                              </div>
+                            </div>
+                        </div>
+                         <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-header-title">
+                                    Распределение цен (Этот виджет пока не доделан)
+                                </h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart chart-appended">
+                                    <canvas id="trafficChart" class="chart-canvas" data-toggle="legend" data-target="#trafficChartLegend"></canvas>
+                                </div>
+                                <div id="trafficChartLegend" class="chart-legend"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                      <h5 class="text-uppercase text-muted mb-2">
+                                        Результат поиска на сайте tourvisor.ru
+                                        </h5>
+                                        <div name="page_tourvisor" class="rez_tourvisor col-auto">
+                                        <img alt="loading" class="d-block mx-auto" height="200" src="/static/loading.gif" width="200">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center">
+                                <div class="col"></div>
+                                <div name="page_tourvisor_price" class="col-auto"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h5 class="text-uppercase text-muted mb-2">
+                                        Результат поиска на сайте booking.ru
+                                        </h5>
+                                        <div name="page_booking" class="rez_booking col-auto">
+                                        <img alt="loading" class="d-block mx-auto" height="200" src="/static/loading.gif" width="200">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center">
+                                <div class="col"></div>
+                                <div name="page_booking_price" class="col-auto"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                      <h5 class="text-uppercase text-muted mb-2">
+                                        Результат поиска на сайте aviasales.ru
+                                      </h5>
+                                        <div name="page_aviasales" class="rez_aviasales col-auto">
+                                        <img alt="loading" class="d-block mx-auto" height="200" src="/static/loading.gif" width="200">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center">
+                                <div class="col"></div>
+                                <div name="page_aviasales_price" class="col-auto"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- JAVASCRIPT -->
+<!-- ================================================== -->
+{#        <script src="https://dashkit.goodthemes.co/assets/libs/jquery/dist/jquery.min.js"></script>#}
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/country_select.js' %}"></script>
+        <script src="{% static 'js/loading_aviasales.js' %}"></script>
+        <script src="{% static 'js/loading_booking.js' %}"></script>
+        <script src="{% static 'js/loading_tourvisor.js' %}"></script>
+        <script src="{% static 'js/loading_rezult.js' %}"></script>
+        <script src="https://dashkit.goodthemes.co/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://dashkit.goodthemes.co/assets/libs/@shopify/draggable/lib/es5/draggable.bundle.legacy.js"></script>
+        <script src="https://dashkit.goodthemes.co/assets/libs/autosize/dist/autosize.min.js"></script>
+
+        <script src="https://dashkit.goodthemes.co/assets/libs/chart.js/dist/Chart.min.js"></script>
+
+        <script src="https://dashkit.goodthemes.co/assets/libs/dropzone/dist/min/dropzone.min.js"></script>
+        <script src="https://dashkit.goodthemes.co/assets/libs/flatpickr/dist/flatpickr.min.js"></script>
+        <script src="https://dashkit.goodthemes.co/assets/libs/highlightjs/highlight.pack.min.js"></script>
+        <script src="https://dashkit.goodthemes.co/assets/libs/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+        <script src="https://dashkit.goodthemes.co/assets/libs/list.js/dist/list.min.js"></script>
+        <script src="https://dashkit.goodthemes.co/assets/libs/quill/dist/quill.min.js"></script>
+        <script src="https://dashkit.goodthemes.co/assets/libs/select2/dist/js/select2.full.min.js"></script>
+        <script src="https://dashkit.goodthemes.co/assets/libs/chart.js/Chart.extension.js"></script>
+
+        <!-- Map -->
+        <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+        <!-- Theme JS -->
+        <script src="{% static 'js/mytheme.js' %}" ></script>
+
+    </body>
+
+</html>

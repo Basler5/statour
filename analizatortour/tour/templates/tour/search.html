@@ -1,0 +1,179 @@
+{% extends "tour/wrapper.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container">
+  <div class="py-5 text-center">
+    <img alt="logo" class="d-block mx-auto" height="150" src="/static/logo.svg" width="265">
+    <h2>Куда хочу - туда лечу!</h2> {% include "tour/includes/welcome_text.html" %}
+  </div>
+  <div class="row">
+    <div class="col-md-4 order-md-2 mb-4">
+      <h4 class="d-flex justify-content-between align-items-center mb-2">
+        <span class="text-muted">Выгодные направления:</span>
+        <span class="badge badge-secondary badge-pill">4</span>
+      </h4>
+      <ul class="list-group mb-2">
+        <li class="list-group-item d-flex justify-content-between bg-light">
+          <div class="text-success">
+            <h6 class="my-0">Индинезия</h6>
+            <small>о. Бали</small>
+          </div>
+          <span class="text-success">67&thinsp;850&#8381;</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between lh-condensed">
+          <div>
+            <h6 class="my-0">Тайланд</h6>
+            <small class="text-muted">Пхукет</small>
+          </div>
+          <span class="text-muted">42&thinsp;324&#8381;</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between lh-condensed">
+          <div>
+            <h6 class="my-0">Турция</h6>
+            <small class="text-muted">Анталья</small>
+          </div>
+          <span class="text-muted">32&thinsp;512&#8381;</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between lh-condensed">
+          <div>
+            <h6 class="my-0">Греция</h6>
+            <small class="text-muted">Родос</small>
+          </div>
+          <span class="text-muted">52&thinsp;100&#8381;</span>
+        </li>
+      </ul>
+      <form class="card p-2">
+        <div class="text-muted list-group-item">
+          <small>Оставь свою почту и я иногда буду присылать тебе выгодные предложения для путешествий</small>
+          <div class="input-group" style="margin-top: 10px">
+            <input type="text" class="form-control" placeholder="оставь e-mail">
+            <div class="input-group-append">
+              <button type="submit" class="btn btn-secondary">Отправить</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-8 order-md-1">
+      <h4 class="mb-2" style="text-align:center">Сообщи мне данные о своем путешествии</h4>
+
+{% for field in search %}
+      {% if field.errors %}
+      <div class="alert alert-danger">{{ field.name }} {{ field.errors }}</div>
+{% endif %}
+      {% endfor %}
+
+
+      <form class="needs-validation" novalidate="" action="" method="POST">
+<!--        {% csrf_token %}-->
+        <hr class="mb-2">
+        <h5 class="mb-2">Откуда ты стартуешь?</h5>
+        <div class="row">
+          <div class="col-md-6 mb-2">
+            {{search.departure_country.label_tag}}
+            {{search.departure_country}}
+          </div>
+          <div class="col-md-6 mb-2">
+            {{search.departure_city.label_tag}}
+            {{search.departure_city}}
+            <div class="invalid-feedback">
+              Выбери правильный город отправления.
+            </div>
+          </div>
+        </div>
+        <hr class="mb-2">
+        <h5 class="mb-2">Когда ты стартуешь?</h5>
+        <div class="row">
+          <div class="col-md-6 mb-2">
+            {{search.date_of_departure.label_tag}}
+            {{search.date_of_departure}}
+          </div>
+          <div class="col-md-6 mb-2">
+            {{search.changing_the_departure_date.label_tag}}
+            {{search.changing_the_departure_date}}
+          </div>
+        </div>
+        <hr class="mb-2">
+        <h5 class="mb-2">Куда ты хочешь отправиться?</h5>
+        <div class="row">
+          <div class="col-md-6 mb-2">
+            {{search.destination_country.label_tag}}
+            {{search.destination_country}}
+          </div>
+          <div class="col-md-6 mb-2">
+            {{search.destination_resort.label_tag}}
+            {{search.destination_resort}}
+          </div>
+        </div>
+        <hr class="mb-2">
+        <h5 class="mb-2">Уже знаешь где ты будешь жить или мне подсказать тебе?</h5>
+        <h6 class="mb-2">Если ты знаешь название отлея то укажи его в поле слева. Если не знаешь,
+                          то укажи параметры отеля справа и я подберу тебе оптимальный вариант.</h6>
+        <div class="row">
+          <div class="col-md-6 mb-2">
+            {{search.hotel_name.label_tag}}
+            {{search.hotel_name}}
+            <div class="invalid-feedback">
+              Такого отеля не найдено
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            {{search.count_of_hotel_stars.label_tag}}
+            {{search.count_of_hotel_stars}}
+            {{search.hotel_rating.label_tag}}
+            {{search.hotel_rating}}
+            {{search.type_of_food.label_tag}}
+            {{search.type_of_food}}
+          </div>
+        </div>
+        <hr class="mb-2">
+        <h5 class="mb-2">Когда обратно?</h5>
+        <div class="row">
+          <div class="col-md-6 mb-2">
+            {{search.return_date.label_tag}}
+            {{search.return_date}}
+          </div>
+          <div class="col-md-6 mb-2">
+            {{search.changing_return_date.label_tag}}
+            {{search.changing_return_date}}
+          </div>
+        </div>
+        <hr class="mb-2">
+        <div class="row">
+          <div class="col-md-6 mb-2">
+            <h5 class="mb-2">Сколько вас?</h5>
+            {{search.number_of_adults.label_tag}}
+            {{search.number_of_adults}}
+            {{search.number_of_children.label_tag}}
+            {{search.number_of_children}}
+            {{search.number_of_infants.label_tag}}
+            {{search.number_of_infants}}
+          </div>
+          <div class="col-md-6 mb-2">
+            <h5 class="mb-2">Прочие параметры</h5>
+            <div class="custom-control custom-checkbox">
+              {{search.direct_flights_only}}
+                <label for="id_direct_flights_only" class="custom-control-label" >Искать только прямые рейсы</label>
+            </div>
+            <div class="custom-control custom-checkbox" >
+                {{ search.accommodation_at_the_hotel_only }}
+                <label for="id_accommodation_at_the_hotel_only" class="custom-control-label">Искаль только отели (исключить апартаменты/гостевые дома/санатории/виллы и т.д.)</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="save-info2">
+              <label class="custom-control-label" for="save-info2">Параметр 2</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="save-info3">
+              <label class="custom-control-label" for="save-info3">Параметр 3</label>
+            </div>
+          </div>
+        </div>
+        <hr class="mb-4">
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Сравнить</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
