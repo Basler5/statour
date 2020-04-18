@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e7c0bc85-a1a8-4bc7-8b4a-4d45c2d10cea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analizatortour/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/analizatortour/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analizatortour/tour/templates/tour/wrapper.html" beforeDir="false" afterPath="$PROJECT_DIR$/analizatortour/tour/templates/tour/wrapper.html" afterDir="false" />
-    </list>
+    <list default="true" id="e7c0bc85-a1a8-4bc7-8b4a-4d45c2d10cea" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -108,7 +104,7 @@
       <workItem from="1586264027674" duration="65494000" />
       <workItem from="1586805264659" duration="4232000" />
       <workItem from="1587134412798" duration="323000" />
-      <workItem from="1587134995238" duration="3207000" />
+      <workItem from="1587134995238" duration="3532000" />
     </task>
     <servers />
   </component>
