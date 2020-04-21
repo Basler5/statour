@@ -123,3 +123,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+try:
+    from local_settings import *
+except ImportError as e:
+    print("Can't find local_settings.py file for config: {}", e)
+    pass
