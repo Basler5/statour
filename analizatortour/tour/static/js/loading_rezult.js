@@ -1,7 +1,7 @@
 
 $(document).ready(
     function(){
-var i = 0, howManyTimes = 18;
+var i = 0, howManyTimes = 22;
 f();
 function f() {
         var request = new XMLHttpRequest();
@@ -31,17 +31,17 @@ function f() {
                                 "</tr>\n" +
                                 "<tr>\n" +
                                 "<td colspan=\"2\">Стоимость путешествия туром:</td>\n" +
-                                "<td><strong><span name='price_tour'>" + rez.rdt_price_for_tour + "</span></strong><span class=\"h2 rubznak-slim-rub text-muted mb-0\"></span>" +
+                                "<td><strong>" + rez.rdt_price_for_tour + "</strong><span class=\"h2 rubznak-slim-rub text-muted mb-0\"></span>" +
                                 "</td>\n" +
                                 "</tr>\n" +
                                 "<tr>\n" +
                                 "<td colspan=\"2\">Стоимость проживания, если покупать отдельно:</td>\n" +
-                                "<td><strong><span name='price_booking'>" + rez.rdb_rezult_with_tax + "</span></strong><span class=\"h2 rubznak-slim-rub text-muted mb-0\"></span>" +
+                                "<td><strong>" + rez.rdb_rezult_with_tax + "</strong><span class=\"h2 rubznak-slim-rub text-muted mb-0\"></span>" +
                                 "</td>\n" +
                                 "</tr>\n" +
                                 "<tr>\n" +
                                 "<td colspan=\"2\">Стоимость перелета, если покупать отдельно:</td>\n" +
-                                "<td><strong><span name='price_avia'>" + rez.rda_lowest_price + "</span></strong><span class=\"h2 rubznak-slim-rub text-muted mb-0\"></span>" +
+                                "<td><strong>" + rez.rda_lowest_price + "</strong><span class=\"h2 rubznak-slim-rub text-muted mb-0\"></span>" +
                                 "</td>\n" +
                                 "</tr>\n" +
                                 "</table>")

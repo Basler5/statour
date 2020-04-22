@@ -16,7 +16,7 @@ function f() {
                     $("div[name='page_aviasales']").empty();
                     if (rez.data.airline2_name==""){
                         $("div[name='page_aviasales']").append(
-                            $("<table>\n" +
+                            $("<table class='col'>\n" +
                                 "<tr>\n" +
                                 "<td colspan=\"3\"></td>\n" +
                                 "</tr>\n" +
@@ -60,9 +60,9 @@ function f() {
                                 "<td><strong>" + rez.data.time_back + "</strong></td>\n" +
                                 "</tr>\n" +
                                 "<tr>\n" +
-                                "<td>Авиакомпания: </td>\n" +
-                                "<td><img src=\"http://" + rez.data.link1 + "\" width=\"99\" height=\"36\" alt=\"airline1\"></td>\n" +
-                                "<td><strong>" + rez.data.airline1_name + "</strong></td>\n" +
+                                "<td colspan=\"2\">Авиакомпания: </td>\n" +
+                                "<td><img src=\"http://" + rez.data.link1 + "\" width=\"99\" height=\"36\" alt=\"airline1\">\n" +
+                                "<strong>" + rez.data.airline1_name + "</strong></td>\n" +
                                 "</tr>\n" +
                                 "</table>")
                             );
