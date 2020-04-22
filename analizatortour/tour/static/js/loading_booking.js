@@ -16,20 +16,57 @@ function f() {
                     $("div[name='page_booking']").empty();
 
                     $("div[name='page_booking']").append(
-                        $("<table>\n" +
-                            "<tr>\n" +
-                            "<td colspan=\"3\">ДИЗАЙН ВЫВОДА В ПРОРАБОТКЕ</td>\n" +
-                            "</tr>\n" +
-                            "<tr>\n" +
-                            "<td colspan=\"3\">" + rez.data.booking_name_hotel + "</td>\n" +
-                            "</tr>\n" +
-                            "<tr>\n" +
-                            "</table>")
+                        $("<table class='col'>\n" +
+                                "<tr>\n" +
+                                "<td colspan=\"3\"></td>\n" +
+                                "</tr>\n" +
+                                "<tr>\n" +
+                                "<td colspan=\"3\">Проживание в <strong>" + rez.data.destination_resort +
+                                "</strong></td>\n" +
+                                "</tr>\n" +
+                                "<tr>\n" +
+                                "<td colspan=\"2\">Самое выгодное место проживания в</td>\n" +
+                                "<td><strong>" + rez.data.booking_name_hotel + "</strong>" +
+                                "</td>\n" +
+                                "</tr>\n" +
+                                "<tr>\n" +
+                                "<td colspan=\"2\">Кол-во звезд места проживания:</td>\n" +
+                                "<td><strong>" + rez.data.booking_count_of_hotel_stars + "</strong>" +
+                                "</td>\n" +
+                                "</tr>\n" +
+                                "<tr>\n" +
+                                "<td colspan=\"2\">Район места проживания:</td>\n" +
+                                "<td><strong>" + rez.data.booking_adress_hotel + "</strong>" +
+                                "</td>\n" +
+                                "</tr>\n" +
+                                "<tr>\n" +
+                                "<td colspan=\"2\">Рейтинг места проживания (от 0 до 10):</td>\n" +
+                                "<td><strong>" + rez.data.booking_hotel_rating + "</strong>" +
+                                "</td>\n" +
+                                "</tr>\n" +
+                                "<tr>\n" +
+                                "<td colspan=\"2\">Питание в месте проживания:</td>\n" +
+                                "<td><strong>" + rez.data.booking_type_of_food + "</strong></td>\n" +
+                                "</tr>\n" +
+                                "<tr>\n" +
+                                "<td colspan=\"2\">Сведения о типе размещения:</td>\n" +
+                                "<td><strong>" + rez.data.booking_type_of_room + "</strong></td>\n" +
+                                "</tr>\n" +
+                                "<tr>\n" +
+                                "<td colspan=\"2\">Стоимость за проживание: </td>\n" +
+                                "<td><strong>" + rez.data.booking_price + "</strong>" +
+                                "<span class=\"h2 rubznak-slim-rub text-muted mb-0\"></span></td>\n" +
+                                "<tr>\n" +
+                                "<td colspan=\"2\">Налоги: </td>\n" +
+                                "<td><strong>" + rez.data.booking_price_taxes + "</strong>" +
+                                "</td>\n" +
+                                "</tr>\n" +
+                                "</table>")
                         );
 
                     $("div[name='page_booking_price']").empty();
                     $("div[name='page_booking_price']").append(
-                            $("<span class=\"h2 mb-0\">\n" +
+                            $("<span class=\"h2\">\n" +
                               "Стоимость проживания с учетом налогов: <strong>" + rez.data.rezult_with_tax + "</strong>\n" +
                               "</span>\n" +
                               "<span class=\"h2 rubznak-rub text-muted mb-0\"></span>")

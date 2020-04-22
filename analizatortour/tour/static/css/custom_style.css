@@ -17,22 +17,22 @@
 /* устанавливаем для таблицы внешнюю границу серого цвета толщиной 3px */
 table {
 	border-top: 3px solid grey;
-	/*border-top: 3px solid grey;*/
+	border-bottom: 3px solid grey;
 	}
 
 /* задаём для ячейки тела таблицы границу серого цвета толщиной 1px */
 td {
+	border-top: 1px solid grey;
 	border-bottom: 1px solid grey;
-	/* border-bottom: 1px solid grey; */
 	}
 
 table td:nth-of-type(2) {
-	width:100px;
+	/*width:100px;*/
 	text-align: right;
 }
 
 table td:nth-of-type(3) {
-	width:145px;
+	/*width:145px;*/
 	text-align: right;
 }
 
@@ -40,4 +40,17 @@ table td:nth-of-type(3) {
 	float: right;
 }
 
+.badge-soft-success {
+    color: black;
+    background-color: #ccf7e5;
+}
 
+.badgers {
+    display: inline-block;
+    padding: .33em .5em;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .375rem;
+}

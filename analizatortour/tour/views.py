@@ -194,14 +194,27 @@ def get_result_data_ajax_rezult(request):
         raw_data_aviasales = ast.literal_eval(older_task.output_data_aviasales)
         raw_data_booking = ast.literal_eval(older_task.output_data_booking)
         raw_data_tourvisor = ast.literal_eval(older_task.output_data_tourvisor)
+        price_a = int(raw_data_aviasales.get("lowest_price"))
+        price_b = int(raw_data_booking.get("rezult_with_tax"))
+        price_t = int(raw_data_tourvisor.get("price_for_tour"))
+        if price_t > (price_a + price_b):
+            header_text = "Выгоднее преобретать перелет + проживание раздельно (не туром)."
+            rezult_price = price_a + price_b
+            raw_rez_diff = round(((price_t - (price_a + price_b)) / (price_a + price_b)) * 1000)
+            rezult_difference = str("дешевле на " + str(raw_rez_diff // 10) + "," + str(raw_rez_diff % 10) + "%")
+        else:
+            header_text = "Выгоднее преобретать путешествие туром."
+            rezult_price = price_t
+            raw_rez_diff = round((((price_a + price_b) - price_t) / price_t) * 1000)
+            rezult_difference = str("дешевле на " + str(raw_rez_diff // 10) + "," + str(raw_rez_diff % 10) + "%")
 
         data_to_render = {"current_status": "finish",
-                          "header_text": "Выгоднее преобретать туром",
+                          "header_text": header_text,
                           "rda_lowest_price": raw_data_aviasales.get("lowest_price"),
                           "rdb_rezult_with_tax": raw_data_booking.get("rezult_with_tax"),
                           "rdt_price_for_tour": raw_data_tourvisor.get("price_for_tour"),
-                          "rezult_price": "100500",
-                          "rezult_difference": "дешевле на 15%",
+                          "rezult_price": str(rezult_price),
+                          "rezult_difference": str(rezult_difference),
                        }
         older_task.output_data_rezult = data_to_render
         older_task.current_status_rezult = "finish"

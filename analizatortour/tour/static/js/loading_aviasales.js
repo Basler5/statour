@@ -69,7 +69,7 @@ function f() {
                     }
                     else {
                       $("div[name='page_aviasales']").append(
-                            $("<table>\n" +
+                            $("<table class='col'>\n" +
                                 "<tr>\n" +
                                 "<td colspan=\"3\"></td>\n" +
                                 "</tr>\n" +
@@ -113,21 +113,21 @@ function f() {
                                 "<td><strong>" + rez.data.time_back + "</strong></td>\n" +
                                 "</tr>\n" +
                                 "<tr>\n" +
-                                "<td>Авиакомпания 1: </td>\n" +
-                                "<td><img src=\"http://" + rez.data.link1 + "\" width=\"99\" height=\"36\" alt=\"airline1\"></td>\n" +
-                                "<td><strong>" + rez.data.airline1_name + "</strong></td>\n" +
+                                "<td colspan=\"2\">Авиакомпания 1: </td>\n" +
+                                "<td><img src=\"http://" + rez.data.link1 + "\" width=\"99\" height=\"36\" alt=\"airline1\">\n" +
+                                "<strong>" + rez.data.airline1_name + "</strong></td>\n" +
                                 "</tr>\n" +
                                 "<tr>\n" +
-                                "<td>Авиакомпания 2: </td>\n" +
-                                "<td><img src=\"http://" + rez.data.link2 + "\" width=\"99\" height=\"36\" alt=\"airline2\"></td>\n" +
-                                "<td><strong>" + rez.data.airline2_name + "</strong></td>\n" +
+                                "<td colspan=\"2\">Авиакомпания 2: </td>\n" +
+                                "<td><img src=\"http://" + rez.data.link2 + "\" width=\"99\" height=\"36\" alt=\"airline2\">\n" +
+                                "<strong>" + rez.data.airline2_name + "</strong></td>\n" +
                                 "</tr>\n" +
                                 "</table>")
                             );
                     };
                     $("div[name='page_aviasales_price']").empty();
                     $("div[name='page_aviasales_price']").append(
-                            $("<span class=\"h2 mb-0\">\n" +
+                            $("<span class=\"h2\">\n" +
                               "Стоимость перелета: <strong>" + rez.data.lowest_price + "</strong>\n" +
                               "</span>\n" +
                               "<span class=\"h2 rubznak-rub text-muted mb-0\"></span>")
