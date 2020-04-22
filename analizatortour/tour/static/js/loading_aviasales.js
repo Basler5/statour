@@ -21,8 +21,8 @@ function f() {
                                 "<td colspan=\"3\"></td>\n" +
                                 "</tr>\n" +
                                 "<tr>\n" +
-                                "<td colspan=\"3\">Перелет из " + rez.data.realy_departure_city +
-                                " в " + rez.data.realy_destination_resort + "</td>\n" +
+                                "<td colspan=\"3\">Перелет из <strong>" + rez.data.realy_departure_city +
+                                "</strong> в <strong>" + rez.data.realy_destination_resort + "</strong></td>\n" +
                                 "</tr>\n" +
                                 "<tr>\n" +
                                 "<td colspan=\"2\">Найден перелет без пересадок за</td>\n" +
