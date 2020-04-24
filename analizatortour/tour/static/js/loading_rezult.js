@@ -1,7 +1,7 @@
 
 $(document).ready(
     function(){
-var i = 0, howManyTimes = 22;
+var i = 0, howManyTimes = 30;
 f();
 function f() {
         var request = new XMLHttpRequest();
@@ -59,7 +59,7 @@ function f() {
         }
     i++;
     if( i < howManyTimes ){
-        setTimeout( f, 5000 );
+        setTimeout( f, 3000 );
     }
     else{
         if(howManyTimes != 0){

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-var i = 0, howManyTimes = 18;
+var i = 0, howManyTimes = 45;
 f();
 function f() {
         var request = new XMLHttpRequest();
@@ -137,7 +137,7 @@ function f() {
         }
     i++;
     if( i < howManyTimes ){
-        setTimeout( f, 5000 );
+        setTimeout( f, 2000 );
     }
     else{
         if(howManyTimes != 0){
