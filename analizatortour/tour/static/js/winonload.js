@@ -141,6 +141,12 @@ window.onload = function() {
             };
         };
 
+        if ($("select[name='destination_country']").val() == "Сингапур") {
+            data2 = {
+                "Сингапур": "Сингапур",
+            };
+        };
+
         if ($("select[name='destination_country']").val() == "Таиланд") {
             data2 = {
                 "Бангкок": "Бангкок",

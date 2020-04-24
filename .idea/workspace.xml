@@ -9,10 +9,8 @@
       <change beforePath="$PROJECT_DIR$/LTA.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/LTA.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LTB.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/LTB.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LTT.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/LTT.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analizatortour/tour/static/js/loading_aviasales.js" beforeDir="false" afterPath="$PROJECT_DIR$/analizatortour/tour/static/js/loading_aviasales.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analizatortour/tour/static/js/loading_booking.js" beforeDir="false" afterPath="$PROJECT_DIR$/analizatortour/tour/static/js/loading_booking.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analizatortour/tour/static/js/loading_rezult.js" beforeDir="false" afterPath="$PROJECT_DIR$/analizatortour/tour/static/js/loading_rezult.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analizatortour/tour/static/js/loading_tourvisor.js" beforeDir="false" afterPath="$PROJECT_DIR$/analizatortour/tour/static/js/loading_tourvisor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analizatortour/tour/static/js/region_select.js" beforeDir="false" afterPath="$PROJECT_DIR$/analizatortour/tour/static/js/region_select.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analizatortour/tour/static/js/winonload.js" beforeDir="false" afterPath="$PROJECT_DIR$/analizatortour/tour/static/js/winonload.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +115,7 @@
       <workItem from="1586805264659" duration="4232000" />
       <workItem from="1587134412798" duration="323000" />
       <workItem from="1587134995238" duration="34758000" />
-      <workItem from="1587738212089" duration="3640000" />
+      <workItem from="1587738212089" duration="5228000" />
     </task>
     <servers />
   </component>

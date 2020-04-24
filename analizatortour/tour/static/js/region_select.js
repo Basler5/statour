@@ -30,6 +30,13 @@ $(document).ready (function () {
     $("select[name='destination_country']").bind("change", function () {
         $("select[name='destination_resort']").empty();
 
+        if ($("select[name='destination_country']").val() == "Сингапур") {
+            data2 = {
+                "Сингапур": "Сингапур",
+            };
+            def2 = "Сингапур";
+        };
+
         if ($("select[name='destination_country']").val() == "Таиланд") {
             data2 = {
                 "Бангкок": "Бангкок",
