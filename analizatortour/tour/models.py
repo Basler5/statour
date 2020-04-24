@@ -12,7 +12,6 @@ class SearchRequest(models.Model):
     )
 
     var_for_departure_city = (
-        ("Любой", "Любой"),
         ("Абакан", "Абакан"),
         ("Анапа", "Анапа"),
         ("Архангельск", "Архангельск"),
@@ -193,7 +192,7 @@ class SearchRequest(models.Model):
         # ("Румыния", "Румыния"),
         # ("Сейшелы", "Сейшелы"),
         # ("Сербия", "Сербия"),
-        # ("Сингапур", "Сингапур"),
+         ("Сингапур", "Сингапур"),
         # ("Словакия", "Словакия"),
         # ("Словения", "Словения"),
         # ("США", "США"),
@@ -219,7 +218,6 @@ class SearchRequest(models.Model):
     )
 
     var_for_destination_resort = (
-        ("Новый", "Новый"),
         ("Гагра", "Гагра"),
         ("Гудаута", "Гудаута"),
         ("Новый Афон", "Новый Афон"),
@@ -927,11 +925,11 @@ class SearchRequest(models.Model):
     date_time_request = models.DateTimeField(auto_now_add=datetime.datetime)
 
     departure_country = models.CharField(verbose_name="Страна отправления", max_length=3, choices=var_for_departure_country, default='RU')
-    departure_city = models.CharField(verbose_name="Город отправления", max_length=60, choices=var_for_departure_city, default="Любой")
+    departure_city = models.CharField(verbose_name="Город отправления", max_length=60, choices=var_for_departure_city, default="Москва")
     date_of_departure = models.DateField(verbose_name="Выбери дату начала путешествия")
     changing_the_departure_date = models.CharField(verbose_name="Возможное отклонение даты начала", max_length=15, choices=var_for_changing_date, default="0")
     destination_country = models.CharField(verbose_name="Страна назначения", max_length=20, choices=var_for_destination_country, default="Таиланд")
-    destination_resort = models.CharField(verbose_name="Курорт назначения", max_length=60, choices=var_for_destination_resort, default="Любой")
+    destination_resort = models.CharField(verbose_name="Курорт назначения", max_length=60, choices=var_for_destination_resort, default="Пхукет")
     hotel_name = models.CharField(verbose_name="Отель", max_length=40, blank=True, null=True)
     count_of_hotel_stars = models.CharField(verbose_name="Кол-во звезд отеля", max_length=1, choices=var_for_count_of_hotel_stars, default="0")
     hotel_rating = models.CharField(verbose_name="Рейтинг отеля", max_length=1, choices=var_for_hotel_rating, default="0")
