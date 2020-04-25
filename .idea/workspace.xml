@@ -2,12 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7c0bc85-a1a8-4bc7-8b4a-4d45c2d10cea" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/myico/Ajax.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/myico/Bootstrap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/myico/CSS.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/myico/DNS.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/myico/Django.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/myico/Git.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/myico/HTML.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/myico/JSON.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/myico/JavaScript.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/myico/Jupyter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/myico/MySql.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/myico/Nginx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/myico/Python.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/myico/SQLite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/myico/Selenium.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/myico/Wireshark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/myico/gitHub.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/myico/jQuery.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analizatortour/tour/templates/tour/tech.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/LTA-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/LTA-checkpoint.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LTA.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/LTA.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LTB.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/LTB.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LTT.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/LTT.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analizatortour/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/analizatortour/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analizatortour/tour/static/js/loading_rezult.js" beforeDir="false" afterPath="$PROJECT_DIR$/analizatortour/tour/static/js/loading_rezult.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analizatortour/tour/templates/tour/rezult.html" beforeDir="false" afterPath="$PROJECT_DIR$/analizatortour/tour/templates/tour/rezult.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/analizatortour/tour/templates/tour/wrapper.html" beforeDir="false" afterPath="$PROJECT_DIR$/analizatortour/tour/templates/tour/wrapper.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analizatortour/tour/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/analizatortour/tour/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analizatortour/tour/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/analizatortour/tour/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +44,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -29,13 +53,17 @@
   </component>
   <component name="JupyterTrust" id="3110f01a-4add-403e-8fb6-5c8b3d8de9cc" />
   <component name="ProjectId" id="1aDG1tfbUDShCFf3Nz6kL1bBAu0" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -112,12 +140,15 @@
       <workItem from="1586805264659" duration="4232000" />
       <workItem from="1587134412798" duration="323000" />
       <workItem from="1587134995238" duration="34758000" />
-      <workItem from="1587738212089" duration="6420000" />
+      <workItem from="1587738212089" duration="9311000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="674" y="374" width="1092" height="722" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586263082720">

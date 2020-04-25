@@ -35,6 +35,9 @@ function f() {
                                 "</td>\n" +
                                 "</tr>\n" +
                                 "<tr>\n" +
+                                "<td colspan=\"3\"></td>\n" +
+                                "</tr>\n" +
+                                "<tr>\n" +
                                 "<td colspan=\"2\">Стоимость проживания, если покупать отдельно:</td>\n" +
                                 "<td><strong>" + rez.rdb_rezult_with_tax + "</strong><span class=\"h2 rubznak-slim-rub text-muted mb-0\"></span>" +
                                 "</td>\n" +

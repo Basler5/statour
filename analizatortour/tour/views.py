@@ -283,3 +283,6 @@ def rezult(request):
         search = SearchForm(instance=form)
     return render(request, 'tour/rezult.html', {"search": search})
 
+def tech(request):
+
+    return render(request, 'tour/tech.html')
