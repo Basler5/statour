@@ -2,37 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7c0bc85-a1a8-4bc7-8b4a-4d45c2d10cea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/fav/android-icon-144x144.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/fav/android-icon-192x192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/fav/android-icon-36x36.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/fav/android-icon-48x48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/fav/android-icon-72x72.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/fav/android-icon-96x96.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/fav/apple-icon-114x114.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/fav/apple-icon-120x120.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/fav/apple-icon-144x144.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/fav/apple-icon-152x152.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/fav/apple-icon-180x180.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/fav/apple-icon-57x57.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/fav/apple-icon-60x60.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/fav/apple-icon-72x72.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/fav/apple-icon-76x76.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/fav/apple-icon-precomposed.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/fav/apple-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/fav/browserconfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/fav/favicon-16x16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/fav/favicon-32x32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/fav/favicon-96x96.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/fav/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/fav/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/fav/ms-icon-144x144.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/fav/ms-icon-150x150.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/fav/ms-icon-310x310.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analizatortour/tour/static/fav/ms-icon-70x70.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analizatortour/tour/templates/tour/rezult.html" beforeDir="false" afterPath="$PROJECT_DIR$/analizatortour/tour/templates/tour/rezult.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analizatortour/tour/templates/tour/tech.html" beforeDir="false" afterPath="$PROJECT_DIR$/analizatortour/tour/templates/tour/tech.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analizatortour/tour/templates/tour/wrapper.html" beforeDir="false" afterPath="$PROJECT_DIR$/analizatortour/tour/templates/tour/wrapper.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analizatortour/tour/static/fav/browserconfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/analizatortour/tour/static/fav/browserconfig.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +112,7 @@
       <workItem from="1586805264659" duration="4232000" />
       <workItem from="1587134412798" duration="323000" />
       <workItem from="1587134995238" duration="34758000" />
-      <workItem from="1587738212089" duration="16720000" />
+      <workItem from="1587738212089" duration="17319000" />
     </task>
     <servers />
   </component>
