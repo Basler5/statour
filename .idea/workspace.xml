@@ -8,7 +8,7 @@
       <change beforePath="$PROJECT_DIR$/LTT.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/LTT.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/analizatortour/tour/templates/tour/includes/welcome_text.html" beforeDir="false" afterPath="$PROJECT_DIR$/analizatortour/tour/templates/tour/includes/welcome_text.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/analizatortour/tour/templates/tour/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/analizatortour/tour/templates/tour/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analizatortour/tour/templates/tour/tech.html" beforeDir="false" afterPath="$PROJECT_DIR$/analizatortour/tour/templates/tour/tech.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analizatortour/tour/templates/tour/wrapper.html" beforeDir="false" afterPath="$PROJECT_DIR$/analizatortour/tour/templates/tour/wrapper.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +118,7 @@
       <workItem from="1586805264659" duration="4232000" />
       <workItem from="1587134412798" duration="323000" />
       <workItem from="1587134995238" duration="34758000" />
-      <workItem from="1587738212089" duration="13431000" />
+      <workItem from="1587738212089" duration="14774000" />
     </task>
     <servers />
   </component>
